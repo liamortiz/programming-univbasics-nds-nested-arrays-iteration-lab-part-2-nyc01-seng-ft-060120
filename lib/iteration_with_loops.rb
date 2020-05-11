@@ -11,7 +11,9 @@ def find_min_in_nested_arrays(src)
       if next_number < prev_number
         prev_number = next_number
       end
+      col += 1
     end
+    row += 1
     low_temps << prev_number
   end
 end
