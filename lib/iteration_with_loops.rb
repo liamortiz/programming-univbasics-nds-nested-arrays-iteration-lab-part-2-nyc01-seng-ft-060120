@@ -5,7 +5,8 @@ def find_min_in_nested_arrays(src)
   low_temps = []
   while row < src.length do
     col = 0
-    prev_number = 1000
+    prev_number = src[0][0]
+    
     while col < src[row].length do
       next_number = src[row][col]
       if next_number < prev_number
@@ -13,6 +14,7 @@ def find_min_in_nested_arrays(src)
       end
       col += 1
     end
+    
     row += 1
     low_temps << prev_number
   end
